@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <title></title>
+    <!-- <link rel="stylesheet" href="shoe_catalogue.css"> -->
+
+    <h1>Mi casa</h1>
+    <h2>Sneakers</h2>
+
+    <!-- <div class="myImage" style="max-width:500px">
+          <img align = "center"class="mySlides" src="image.jpg" style="width:100%">
+        </div> -->
+</head>
+
+<body>
+    <div id="dis" align="center">
+
+      <script id="newBrandOption" type="text/x-handlebars-template">
+        <select class ="brand" >
+          {{#each stock}}
+          <option>{{this.brand}}</option>
+          {{/each}}
+        </select>
+      </script>
+</div>
+    <br>
+    <div id="drpdwn" align="center">
+
+
+
+    <script id="newColorOption" type="text/x-handlebars-template">
+        <select>
+          {{#each stock}}
+              <option>{{this.color}}</option>
+              {{/each}}
+            </select>
+        </script>
+
+        </head>
+        <div id="brandOption" class="">
+
+        </div>
+
+        <div>
+
+        </div>
+        <br><br><button id="search">Search</button><br><br>
+        <button id='showAll'>Show All</button>
+        <button onclick="hide()" class='hideBtn'>Adding Stock</button><br><br><br>
+    </div>
+    <div class="addStock hidden">
+        <input id="brand" type="text" value="" placeholder=" enter brand"><br><br>
+        <input id="color" type="text" value="" placeholder=" enter color"><br><br>
+        <input id="size" type="text" value="" placeholder=" enter size"><br><br>
+        <input id="Price" type="text" value="" placeholder=" enter Price"><br><br>
+        <input id="InStock" type="text" value="" placeholder=" enter number of stock"><br><br>
+
+        <br><button id="show" type="add">Add Stock</button><br><br>
+    </div>
+
+
+
+    <div id="display">
+        <script id="output" type="text/x-handlebars-template">
+            <table>
+                <tr>
+                    <th>brand</th>
+                    <th>color</th>
+                    <th>size</th>
+                    <th>in store</th>
+                    <th>Price</th>
+                </tr>
+
+
+                {{#each stock}}
+                <tr>
+                    <td>{{brand}}</td>
+                    <td>{{color}}</td>
+                    <td>{{size}}</td>
+                    <td>{{in_stock}}</td>
+                    <td> R {{price}}<button id ="button" value={{_id}}>Purchase</button></td>
+                </tr>
+
+                {{/each}}
+            </table>
+        </script>
+      
+
+
+        <script type="text/javascript" src="shoe.js">
+        </script>
+
+
+
+
+</body>
+
+</html>

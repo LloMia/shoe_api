@@ -1,0 +1,28 @@
+{
+  "name": "shoe_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LloMia/shoe_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LloMia/shoe_api/issues"
+  },
+  "homepage": "https://github.com/LloMia/shoe_api#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.5",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.7"
+}
+}
