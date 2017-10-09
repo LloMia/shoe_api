@@ -16,7 +16,7 @@ $(function() {
 
     $.ajax({
         type: "GET",
-        url: 'http://localhost:3006/api/shoe',
+        url: 'https://pacific-lowlands-57609.herokuapp.com/api/shoe',
         // dataType: "json",
 
         success: function(data) {
@@ -125,7 +125,6 @@ $(function() {
 
     $('#display').on('click', function(e) {
         var id = e.target.value;
-        console.log(id);
 
         $.ajax({
             type: "POST",
