@@ -16,7 +16,7 @@ $(function() {
 
     $.ajax({
         type: "GET",
-        url: 'https://pacific-lowlands-57609.herokuapp.com/api/shoe',
+        url: 'http://localhost:3006/api/shoe',
         // dataType: "json",
 
         success: function(data) {
@@ -67,7 +67,7 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: 'https://pacific-lowlands-57609.herokuapp.com/api/shoe',
+            url: 'http://localhost:3006/api/shoe',
             dataType: "json",
             data: shoes,
             success: function(data) {
@@ -88,7 +88,7 @@ $(function() {
 
         $.ajax({
             type: "GET",
-            url: 'https://pacific-lowlands-57609.herokuapp.com/api/shoe/brand/' + brandOption,
+            url: 'http://localhost:3006/api/shoe/brand/' + brandOption,
             success: function(data) {
                 console.log(data);
                 display.innerHTML = theTemplate({
@@ -110,7 +110,7 @@ $(function() {
 
         $.ajax({
             type: "GET",
-            url: 'https://pacific-lowlands-57609.herokuapp.com/api/shoe/color/' + colorOption,
+            url: 'http://localhost:3006/api/shoe/color/' + colorOption,
             success: function(data) {
                 display.innerHTML = theTemplate({
                     stock: data
@@ -125,10 +125,11 @@ $(function() {
 
     $('#display').on('click', function(e) {
         var id = e.target.value;
+        console.log(id);
 
         $.ajax({
             type: "POST",
-            url: 'https://pacific-lowlands-57609.herokuapp.com/api/shoe/sold/' + id,
+            url: 'http://localhost:3006/api/shoe/sold/' + id,
             dataType: "json",
 
             success: function(data) {

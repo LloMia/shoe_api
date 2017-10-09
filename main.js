@@ -91,7 +91,7 @@ module.exports = function(models) {
         if (err) {
           return done(err)
         }
-        if (results.in_stock < 1){
+        if (results.in_stock <= 1){
             results.remove()
         }
         res.send(results)
