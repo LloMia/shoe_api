@@ -1,6 +1,5 @@
 $(function() {
 
-
     var display = document.getElementById("display");
 
     var dropDownDisplay = document.querySelector("#drpdwn");
@@ -17,7 +16,6 @@ $(function() {
     $.ajax({
         type: "GET",
         url: 'https://pacific-lowlands-57609.herokuapp.com/api/shoe',
-        // dataType: "json",
 
         success: function(data) {
 
@@ -34,7 +32,6 @@ $(function() {
             })
         },
         error: function(error) {
-            // alert('failed while adding stock');
         }
     })
 
@@ -53,9 +50,6 @@ $(function() {
         var price = document.getElementById('Price').value;
 
         var display = document.getElementById("display");
-
-        // var table = document.getElementById("output").innerHTML;
-        // var theTemplate = Handlebars.compile(table);
 
         var shoes = {
             brand: brand,
@@ -100,9 +94,6 @@ $(function() {
             }
         })
     })
-
-
-
 
     $('#drpdwn').on('click', function(e) {
 
