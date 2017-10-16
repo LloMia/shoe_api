@@ -51,7 +51,7 @@ app.post('/api/shoe/sold/:id', routes.stockSell);
 
 
 
-app.set('port', process.env.PORT || 3006);
+app.set('port', process.env.PORT || 3007);
 app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
 });
